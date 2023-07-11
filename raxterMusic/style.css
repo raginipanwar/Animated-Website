@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    perspective: 100%;
+    width: 100%;
+}
+#cursor{
+    height: 15px;
+    width: 15px;
+    background-color: rgba(224, 235, 16, 0.485);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+#cursor-blur{
+    height: 500px;
+    width: 500px;
+    background-color: rgba(217, 226, 38, 0.137);
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 9;
+}
+#nav{
+    height: 80px;
+    width: 100%;
+    /*background-color: blue;*/
+    display: flex;
+    align-items: center;
+    padding: 0 150px;
+    gap: 100px;
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 99;
+    
+}
+
+#nav img{
+    height: 70px;
+}
+
+#nav h4{
+   text-transform: uppercase; 
+   font-weight: 500;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main{
+position: relative;
+background-color: rgba(0, 0, 0, 0.682);;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+}
+#page1 h1{
+    font-size: 100px;
+    font-weight: 1900;
+    position: relative;
+}
+#page1 h1::before{
+        content: "RAX & THE RHYTHM";
+        position: absolute;
+        color: rgb(48, 46, 5);
+        top: -6px;
+        left: -6px;
+        -webkit-text-stroke: 2px rgb(224, 235, 16);
+        z-index: -1;
+
+}
+#page1 h2{
+    font-size: 43px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#page1 p{
+    font-size: 15px;
+    font-weight: 400;
+    width: 44%;
+    text-align: center;
+}
+#page2{
+    min-height: 100vh;
+    width: 100vw;
+    z-index: 10;
+}
+
+#scroller{
+    /*background-color: rgba(214, 221, 13, 0.892);*/
+    white-space: nowrap;
+    width: fit-content;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h4{
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 900;
+    font-family: cursive;
+    margin-right: 10px;
+    transition: all linear 0.5s;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(246, 8, 178);
+}
+#scroller h4:hover{
+    color: rgb(246, 8, 178);
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#new-song{
+    height: 48vh;
+    width: 100%;
+    /* background-color: grey; */
+    display: flex;
+    padding: 0 2vw;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    justify-content: space-around;
+   
+}
+#new-song img{
+   height: 32vh;
+   width: 10vw;
+   object-fit: cover;
+}
+#new-song-in{
+    width: 40%;
+    text-align: center;
+}
+#new-song-in h3{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+#new-song-in p{
+  line-height: 20px;
+}
+
+#cards-container{
+    /* background-color: red; */
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 80px;
+    position: relative;
+    z-index: 10;
+}
+.card{
+    height: 80%;
+    width: 35%;
+    /* background-color: blue; */
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    /* object-fit: cover; */
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+#card1{
+    background-image:url(cover1.jpeg);
+}
+#card2{
+    background-image:url(cover2.jpeg);
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: yellowgreen;
+    padding: 30px;
+    padding-top: 100px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.overlay h4{
+    color: #000;
+    font-size: 40px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+.overlay p{
+    color: #000;
+    font-size: 18px;
+    font-weight: 100;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(1,1,0,18deg);
+}
+.class1{
+    padding: 76px 0 0 0;
+}
+#green-div{
+    background: linear-gradient(to left bottom,rgb(25, 195, 218), rgb(227, 129, 221));
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    #green-div h4{
+    width: 50%;
+    font-size: 23px;
+    text-align: center;
+    font-weight: 700;
+}
+ #green-div img{
+    height: 100%;
+    object-fit: cover;
+    width: 15%;
+}
+
+#contact-us{
+    min-height: 100vh;
+    width: 100vw;
+    z-index: 10;
+}
+
+ /* a:hover{
+    background: #1b9bff;
+    transition: 0.5s;
+} */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(166, 243, 11, 0.616);
+    backdrop-filter: blur(15px);
+    opacity: 10%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav .toggle_btn{
+    cursor: pointer;
+    display: none;
+}
+.dropdown_menu.open{
+    height: 240px;
+
+}
+
+ @media screen and (max-width: 950px) {
+   #nav h4{
+    display: none;
+   }
+   #nav .toggle_btn{
+    display: block;
+   }
+   .dropdown_menu{
+    display: block;
+   }
+  
+} 

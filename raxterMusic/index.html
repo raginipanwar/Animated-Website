@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaxterMusic</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div id="nav">
+        <img class="logo" src="raxter.webp"  alt="">
+        <h4 ><a class="bio" href="#page1">Bio</a></h4>
+        <h4><a href="https://www.youtube.com/@raxter_music">Feed</a></h4>
+        <h4><a href="#page2">Music </a></h4>
+        <h4><a href="./contact.html#contact-us">Contact</a></h4>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="dropdown_menu">
+        <li><h4 ><a class="bio" href="#page1">Bio</a></h4></li>
+        <li><h4><a href="https://www.youtube.com/@raxter_music">Feed</a></h4></li>
+        <li><h4><a href="#page2">Music </a></h4></li>
+        <li><h4><a href="./contact.html#contact-us">Contact</a></h4></li>
+    </div>
+
+    <video autoplay loop muted src="./assets/video.mp4"></video>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+
+    
+    <div id="main">
+        <div id="page1">
+        <h1><b>RAX & THE RHYTHM</b></h1>
+        <h2>WELCOME TO RAXTER MUSIC!</h2>
+        <P>Raxter is an Indian singer-songwriter and producer who expresses his vision through a variety of musical genres while attempting to modernize the indie music vibe.</P>
+        </div>
+        <div id="page2">
+            <div id="scroller">
+                <div id="scroller-in">
+                    <h4> NEW DROPS! </h4>
+                    <h4> LISTEN NOW! </h4>
+                </div>
+                <div id="scroller-in">
+                        <h4> NEW DROPS! </h4>
+                        <h4> LISTEN NOW! </h4>
+                </div>
+            </div>
+            <div id="new-song">
+                <img src="newsong.jpeg" controls></img>
+                <div id="new-song-in">
+                    <h3>Aaja Mai Leke Chalu</h3>
+                    <p>Celebrate your happy moments with 'Aaja Main Leke Chalu', a joyful and romantic Hindi song that will make you tap your feet and sing along. This Bollywood track captures the essence of love and togetherness, with catchy lyrics and a fun melody that will keep you hooked. </p>
+                </div>
+                <div id="new-song-in">
+                    <h3>Teriyaan Mulakaate</h3>
+                    <p>Celebrate your happy moments with 'Aaja Main Leke Chalu', a joyful and romantic Hindi song that will make you tap your feet and sing along. This Bollywood track captures the essence of love and togetherness, with catchy lyrics and a fun melody that will keep you hooked. </p>
+                </div>
+                <img src="newsong2.jpeg" controls></img>
+            </div>
+            <div id="cards-container">
+                <div class="card" id="card1">
+                        <div class="overlay">
+                            <h4>Tu Hai</h4>
+                            <p>This song is a heartfelt ballad that expresses the depth of my emotions and features a beautiful melody. </p>
+                        </div>
+                </div>
+                <div class="card" id="card2">
+                    <div class="overlay">
+                        <h4>There For You</h4>
+                        <p>It is about miscommunications and how it affects a relationship.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="class1">
+                <div id="green-div">
+                    <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg"
+                      alt="">
+                      <h4>
+                      SUBSCRIBE TO MY CHANNEL FOR MORE SONGS CURATED JUST FOR YOU
+                    </h4>
+                    <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg"
+                      alt="">
+                    
+                  </div>
+            </div>
+           
+        </div>
+
+        
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
